@@ -4,8 +4,10 @@ import Home from './components/Home';
 import Contact from './components/Contact';
 import About from './components/About';
 import Registration from './components/Registration';
-import Signin from './components/Signin';
+import Login from './components/Login';
+import Footer from './components/Footer';
 import Error from './components/Error';
+import Logout from './components/Logout';
 import {Route,Switch} from 'react-router-dom';
 import './App.css';
 const App = () => {
@@ -25,13 +27,20 @@ const App = () => {
         <Route path="/register">
           <Registration/>
         </Route>
-        <Route path="/signin">
-          <Signin/>
+        <Route path="/login">
+          <Login/>
+        </Route>
+        <Route path="/contact">
+          <Contact/>
+        </Route>
+        <Route path="/logout">
+          <Logout/>
         </Route>
         <Route>
           <Error/>
         </Route>
       </Switch>
+      <Footer/>
     </>
   )
 }
